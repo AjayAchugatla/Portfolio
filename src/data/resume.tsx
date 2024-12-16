@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon, FileText } from "lucide-react";
 
 export const DATA = {
   name: "Ajay Achugatla",
@@ -48,6 +48,12 @@ export const DATA = {
         icon: Icons.email,
         navbar: false,
       },
+      Resume: {
+        name: "Resume",
+        url: "https://drive.google.com/file/d/1Pory9vzPkU7ixFMc-yJ-tE0ANJOuHRGl/view?usp=drive_link",
+        icon: FileText,
+        navbar: true
+      }
     },
   },
 
