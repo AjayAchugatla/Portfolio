@@ -18,10 +18,14 @@ export const DATA = {
     "CSS",
     "Javascript",
     "Node.js",
-    "React",
+    "Express.js",
+    "React.js",
     "Next.js",
     "Typescript",
     "Postgres",
+    "MongoDB",
+    "TailwindCSS",
+    "Git",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -38,7 +42,7 @@ export const DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/achugatla-ajay-kumar-71b4ba292/",
+        url: "https://www.linkedin.com/in/ajayachugatla/",
         icon: Icons.linkedin,
         navbar: true,
       },
@@ -50,7 +54,7 @@ export const DATA = {
       },
       Resume: {
         name: "Resume",
-        url: "https://drive.google.com/file/d/1IrPsN8KzYoKrDtUKNuEbqpcSx71_UeKN/view?usp=drive_link",
+        url: "https://drive.google.com/file/d/1ZS8wZd3y1v22eUatAjxuCDLU7yJe8U8a/view?usp=sharing",
         icon: FileText,
         navbar: true
       }
@@ -89,12 +93,67 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Note Vault",
-      href: "https://note-vault-sand.vercel.app/",
-      dates: "July 2024 - Oct 2024",
+      title: "Convivialix",
+      href: "https://convivialix.vercel.app/",
       active: true,
       description:
-        "NoteVault is a dynamic and user-friendly notes application designed to streamline personal organization. It features secure user authentication, allowing individuals to sign up and log in effortlessly. With intuitive functionality, users can create, edit, delete, and manage their notes seamlessly, all within a responsive and visually appealing interface.",
+        "Convivialix is a full-stack social media platform that enables users to post content, upload images, interact through likes and comments, and follow others. The platform includes editable profiles, real-time follower stats, and secure authentication with modern UI components.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Prisma",
+        "NeonDB",
+        "Clerk",
+        "UploadThing",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://convivialix.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/AjayAchugatla/convivialix",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Tunifyx",
+      href: "https://tunifyx.vercel.app/",
+      active: true,
+      description:
+        "Tunifyx is a full-featured music streaming platform with admin-managed media, playlists, user analytics, and secure access. It offers a responsive design, seamless playback experience, and dashboard insights for both users and administrators.",
+      technologies: [
+        "React.js",
+        "MongoDB",
+        "TailwindCSS",
+        "Express.js",
+        "Node.js",
+        "Zustand",
+        "Clerk",
+        "Cloudinary",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://tunifyx.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/AjayAchugatla/Tunifyx",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "NoteVault",
+      href: "https://mynotevault.vercel.app/",
+      active: true,
+      description:
+        "NoteVault is a secure and efficient note-taking application offering email-based OTP verification, user-level isolation, folder management, and pinning. It features a clean UI with responsive design and robust session handling.",
       technologies: [
         "React.js",
         "MongoDB",
@@ -105,7 +164,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://note-vault-sand.vercel.app/",
+          href: "https://mynotevault.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -116,12 +175,35 @@ export const DATA = {
       ],
     },
     {
-      title: "Payments App",
-      href: "https://payments-app-frontend.onrender.com/",
-      dates: "Aug 2024",
+      title: "Snip",
+      href: "https://snipapp.vercel.app/",
       active: true,
       description:
-        "Payments App is a secure and intuitive platform for managing digital transactions. It offers seamless user authentication, profile management, and the ability to send money to registered users. Built with reliability in mind, it leverages MongoDB transactions to ensure secure and atomic transfers, all within a responsive and user-centric interface.",
+        "Snip is a modern URL shortening application with user authentication, custom slug creation, and real-time click analytics. It includes a personalized dashboard and mobile-friendly interface for link management.",
+      technologies: [
+        "React.js",
+        "Supabase",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://snipapp.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/AjayAchugatla/snip",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Payments App",
+      href: "https://payments-app-frontend.onrender.com/",
+      active: true,
+      description:
+        "Payments App is a digital transaction platform that enables users to send money securely to others. It leverages MongoDB transactions for atomic transfers and includes login, transfer history, and user profile management.",
       technologies: [
         "React.js",
         "MongoDB",
@@ -145,10 +227,9 @@ export const DATA = {
     {
       title: "Currency Converter",
       href: "https://currencyconverter0018.netlify.app/",
-      dates: "Jul 2024",
       active: true,
       description:
-        "Currency Converter is a React-based application designed to provide real-time currency exchange rate conversions. By leveraging an API, it ensures accurate and up-to-date information, enabling users to seamlessly convert between multiple currencies through an intuitive and responsive interface.",
+        "Currency Converter is a lightweight tool that provides accurate and real-time currency exchange conversions using a public API. It features a minimalistic and responsive UI for quick and easy conversions.",
       technologies: [
         "React.js",
         "TailwindCSS",
@@ -169,14 +250,13 @@ export const DATA = {
     {
       title: "BMI Wizard",
       href: "https://bmi-wizard.netlify.app/",
-      dates: "Feb 2024 - June 2024",
       active: true,
       description:
-        "BMI Wizard is a web application designed to help users calculate their Body Mass Index (BMI) and receive personalized diet and exercise recommendations based on their BMI category. The application is intuitive and user-friendly, catering to users of all backgrounds to improve their health through informed decisions.",
+        "BMI Wizard is a health-focused tool that calculates Body Mass Index and provides custom diet and workout suggestions based on user input. It features an intuitive interface for quick access to fitness recommendations.",
       technologies: [
         "HTML",
         "CSS",
-        "Javascript",
+        "JavaScript",
         "Uiverse Components",
       ],
       links: [
@@ -191,6 +271,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-    },
-  ],
+    }
+  ]
+  ,
 } as const;
