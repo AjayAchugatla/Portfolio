@@ -2,14 +2,18 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import { CodingProfileCard } from "@/components/coding-profile-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import { getCodingProfiles } from "@/actions/coding-profiles";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
 
-export default function Page() {
+export default async function Page() {
+  const { leetcode, codeforces } = await getCodingProfiles(DATA.codingProfiles.username);
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -83,9 +87,66 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <section id="coding-profiles">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Coding Profiles
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  My programming journey
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Here&apos;s my progress on LeetCode and CodeForces platforms,
+                  showcasing problem-solving skills and algorithmic thinking.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[800px] mx-auto">
+            <BlurFade delay={BLUR_FADE_DELAY * 11}>
+              <CodingProfileCard
+                platform="LeetCode"
+                username={DATA.codingProfiles.platforms[0].username}
+                profileUrl={DATA.codingProfiles.platforms[0].url}
+                logoUrl={DATA.codingProfiles.platforms[0].logoUrl}
+                stats={leetcode ? {
+                  totalSolved: leetcode.totalSolved,
+                  totalQuestions: leetcode.totalQuestions,
+                  easySolved: leetcode.easySolved,
+                  mediumSolved: leetcode.mediumSolved,
+                  hardSolved: leetcode.hardSolved,
+                  acceptanceRate: leetcode.acceptanceRate,
+                  ranking: leetcode.ranking,
+                } : null}
+              />
+            </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY * 11.5}>
+              <CodingProfileCard
+                platform="CodeForces"
+                username={DATA.codingProfiles.platforms[1].username}
+                profileUrl={DATA.codingProfiles.platforms[1].url}
+                logoUrl={DATA.codingProfiles.platforms[1].logoUrl}
+                stats={codeforces ? {
+                  rating: codeforces.rating,
+                  maxRating: codeforces.maxRating,
+                  rank: codeforces.rank,
+                  maxRank: codeforces.maxRank,
+                  contestsParticipated: codeforces.contestsParticipated,
+                  friendOfCount: codeforces.friendOfCount,
+                  organization: codeforces.organization,
+                  country: codeforces.country,
+                } : null}
+              />
+            </BlurFade>
+          </div>
+        </div>
+      </section>
       <section id="projects">
         <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <BlurFade delay={BLUR_FADE_DELAY * 12}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -106,7 +167,7 @@ export default function Page() {
             {DATA.projects.map((project, id) => (
               <BlurFade
                 key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                delay={BLUR_FADE_DELAY * 13 + id * 0.05}
               >
                 <ProjectCard
                   href={project.href}

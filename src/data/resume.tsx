@@ -54,7 +54,7 @@ export const DATA = {
       },
       Resume: {
         name: "Resume",
-        url: "https://drive.google.com/file/d/1ZS8wZd3y1v22eUatAjxuCDLU7yJe8U8a/view?usp=sharing",
+        url: "https://drive.google.com/file/d/1649i6VfLwGZhSe1xYcsJptHtePJNwYOQ/view?usp=drive_link",
         icon: FileText,
         navbar: true
       }
@@ -91,6 +91,23 @@ export const DATA = {
       end: "2022",
     },
   ],
+  codingProfiles: {
+    username: "ajayachugatla",
+    platforms: [
+      {
+        name: "LeetCode",
+        username: "ajayachugatla",
+        url: "https://leetcode.com/ajayachugatla",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png",
+      },
+      {
+        name: "CodeForces",
+        username: "ajayachugatla",
+        url: "https://codeforces.com/profile/ajayachugatla",
+        logoUrl: "https://cdn.iconscout.com/icon/free/png-256/free-code-forces-3628695-3029920.png",
+      },
+    ],
+  },
   projects: [
     {
       title: "Convivialix",
