@@ -54,7 +54,7 @@ export const DATA = {
       },
       Resume: {
         name: "Resume",
-        url: "https://drive.google.com/file/d/1649i6VfLwGZhSe1xYcsJptHtePJNwYOQ/view?usp=drive_link",
+        url: "https://drive.google.com/file/d/1YuF6pL1Qd4ZyrlhS7pIi5dKVRFfL7mt2/view?usp=sharing",
         icon: FileText,
         navbar: true
       }
@@ -109,6 +109,35 @@ export const DATA = {
     ],
   },
   projects: [
+    {
+      title: "Career-Edge",
+      href: "https://career-edge-frontend.onrender.com/",
+      active: true,
+      description:
+        "Career-Edge is a personalized career intelligence platform that provides AI-powered market insights, skill recommendations, and assists with resume and cover letter creation. Features include onboarding experience, dynamic dashboard with industry trends, salary ranges, and weekly automated updates using Gemini API.",
+      technologies: [
+        "Next.js",
+        "Prisma",
+        "PostgreSQL",
+        "NeonDB",
+        "TailwindCSS",
+        "Clerk",
+        "Google Gemini API",
+        "Ingest",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://careeredge.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/AjayAchugatla/CareerEdge",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
     {
       title: "Convivialix",
       href: "https://convivialix.vercel.app/",
